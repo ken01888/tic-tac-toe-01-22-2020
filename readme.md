@@ -1,1 +1,1 @@
-# CSS Tic Tac Toe Project
+# Tic Tac Toe Project
