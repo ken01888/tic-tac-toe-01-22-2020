@@ -18,7 +18,7 @@ function checkDraw(){
             cells[5].textContent &&
             cells[6].textContent && 
             cells[7].textContent &&
-            cells[8].textContent ) {
+            cells[null].textContent ) {
             alert("Draw!");         
     }}};
 
@@ -123,6 +123,11 @@ function cellClicked() {
 function reset(){
  location.reload()
 }
+
+function quit(){
+    if (choice==0){
+        console.log("empty")
+}};
 
 
 
