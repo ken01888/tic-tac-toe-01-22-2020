@@ -124,10 +124,7 @@ function reset(){
  location.reload()
 }
 
-function quit(){
-    if (choice==0){
-        console.log("empty")
-}};
+
 
 
 
