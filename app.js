@@ -7,6 +7,7 @@ for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", cellClicked);
     cells[i].addEventListener("click", checkWin); 
     cells[i].addEventListener("click", checkDraw); 
+
 //Check For Draw
 function checkDraw(){
         if (cells[i].textContent &&
@@ -18,7 +19,8 @@ function checkDraw(){
             cells[5].textContent &&
             cells[6].textContent && 
             cells[7].textContent &&
-            cells[null].textContent ) {
+            cells[i].textContent 
+            ) {
             alert("Draw!");         
     }}};
 
@@ -123,7 +125,6 @@ function cellClicked() {
 function reset(){
  location.reload()
 }
-
 
 
 
