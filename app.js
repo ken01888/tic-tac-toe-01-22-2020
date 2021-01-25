@@ -1,5 +1,5 @@
 let cells = document.querySelectorAll(".row>div");
-let choice = ["O","X", "O", "X", "O", "X", "O", "X", "O", "X"];
+let choice = ["X", "O", "X", "O", "X", "O", "X", "O", "X"];
 
 for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", cellClicked);
@@ -134,9 +134,20 @@ function cellClicked() {
 };
 
 // reset
-function reset(){
- location.reload()
+function resetO(){
+alert("Congragulations PlayerO You've Won!!")
+location.reload()
 }
+
+function resetX(){
+    alert("Congragulations PlayerX You've Won!!")
+    location.reload()
+    }
+
+function resetDraw(){
+        alert("We have a draw!")
+        location.reload()
+        }
 
 
 function winnerO(){
@@ -149,16 +160,16 @@ function winnerO(){
     cells[6].removeEventListener("click",cellClicked)
     cells[7].removeEventListener("click",cellClicked)
     cells[8].removeEventListener("click",cellClicked)
-    alert("Congragulations PlayerO You've Won!!")
-    cells[0].addEventListener("click",reset)
-    cells[1].addEventListener("click",reset)
-    cells[2].addEventListener("click",reset)
-    cells[3].addEventListener("click",reset)
-    cells[4].addEventListener("click",reset)
-    cells[5].addEventListener("click",reset)
-    cells[6].addEventListener("click",reset)
-    cells[7].addEventListener("click",reset)
-    cells[8].addEventListener("click",reset)
+    cells[0].addEventListener("click",resetO)
+    cells[1].addEventListener("click",resetO)
+    cells[2].addEventListener("click",resetO)
+    cells[3].addEventListener("click",resetO)
+    cells[4].addEventListener("click",resetO)
+    cells[5].addEventListener("click",resetO)
+    cells[6].addEventListener("click",resetO)
+    cells[7].addEventListener("click",resetO)
+    cells[8].addEventListener("click",resetO)
+
 
 }
 
@@ -172,16 +183,15 @@ function winnerX(){
         cells[6].removeEventListener("click",cellClicked)
         cells[7].removeEventListener("click",cellClicked)
         cells[8].removeEventListener("click",cellClicked)
-        alert("Congragulations PlayerX You've Won!!")
-        cells[0].addEventListener("click",reset)
-        cells[1].addEventListener("click",reset)
-        cells[2].addEventListener("click",reset)
-        cells[3].addEventListener("click",reset)
-        cells[4].addEventListener("click",reset)
-        cells[5].addEventListener("click",reset)
-        cells[6].addEventListener("click",reset)
-        cells[7].addEventListener("click",reset)
-        cells[8].addEventListener("click",reset)
+        cells[0].addEventListener("click",resetX)
+        cells[1].addEventListener("click",resetX)
+        cells[2].addEventListener("click",resetX)
+        cells[3].addEventListener("click",resetX)
+        cells[4].addEventListener("click",resetX)
+        cells[5].addEventListener("click",resetX)
+        cells[6].addEventListener("click",resetX)
+        cells[7].addEventListener("click",resetX)
+        cells[8].addEventListener("click",resetX)
 }
 
 function draw()
@@ -195,20 +205,16 @@ function draw()
         cells[6].removeEventListener("click",cellClicked)
         cells[7].removeEventListener("click",cellClicked)
         cells[8].removeEventListener("click",cellClicked)
-        alert("Draw")
-        cells[0].addEventListener("click",reset)
-        cells[1].addEventListener("click",reset)
-        cells[2].addEventListener("click",reset)
-        cells[3].addEventListener("click",reset)
-        cells[4].addEventListener("click",reset)
-        cells[5].addEventListener("click",reset)
-        cells[6].addEventListener("click",reset)
-        cells[7].addEventListener("click",reset)
-        cells[8].addEventListener("click",reset)
+        cells[0].addEventListener("click",resetDraw)
+        cells[1].addEventListener("click",resetDraw)
+        cells[2].addEventListener("click",resetDraw)
+        cells[3].addEventListener("click",resetDraw)
+        cells[4].addEventListener("click",resetDraw)
+        cells[5].addEventListener("click",resetDraw)
+        cells[6].addEventListener("click",resetDraw)
+        cells[7].addEventListener("click",resetDraw)
+        cells[8].addEventListener("click",resetDraw)
 }
-
-
-
 
 
 
